@@ -7,7 +7,11 @@ dotenv.config();
 const app = express();
 const PORT = 5000;
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: "https://movie-app-frontend-g6y5.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.use(express.json());
 
